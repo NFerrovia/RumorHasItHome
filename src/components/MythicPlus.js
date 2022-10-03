@@ -29,7 +29,8 @@ export default class MythicPlus extends React.PureComponent {
         <Paper>
           <Scheduler data={data}>
             <ViewState />
-            <WeekView startDayHour={9} endDayHour={22} />
+            {/* <WeekView startDayHour={11} endDayHour={23} /> */}
+            <WeekView />
             <Appointments />
             <AppointmentTooltip />
             <Resources data={resources} />
