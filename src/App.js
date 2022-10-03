@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import RaidingSchedule from './components/RaidingSchedule';
+import MythicPlus from './components/MythicPlus';
+import ActiveRaiders from './components/ActiveRaiders';
+import Events from './components/Events';
+import Route from './components/Route';
+import Header from './components/Header';
+import '../src/css/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Route path="/">
+        <RaidingSchedule />
+      </Route>
+      <Route path="/Activity">
+        <ActiveRaiders label="Selecciona un color de fondo del menú" />
+      </Route>
+      <Route path="/Mythicplus">
+        <MythicPlus />
+      </Route>
+      <Route path="/Events">
+        <Events />
+      </Route>
     </div>
   );
-}
+};
 
 export default App;
