@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RumorHasItHome/static/css/main.688c0b79.css",
+    "main.js": "/RumorHasItHome/static/js/main.011a4013.js",
+    "index.html": "/RumorHasItHome/index.html",
+    "main.688c0b79.css.map": "/RumorHasItHome/static/css/main.688c0b79.css.map",
+    "main.011a4013.js.map": "/RumorHasItHome/static/js/main.011a4013.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.688c0b79.css",
+    "static/js/main.011a4013.js"
+  ]
+}
