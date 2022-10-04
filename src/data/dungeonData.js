@@ -44,7 +44,7 @@ export const appointments = [
     startDate: new Date(2022, 9, 6, 20, 0),
     endDate: new Date(2022, 9, 6, 21, 0),
     id: 5,
-    members: [1, 3, 14],
+    members: [1, 3, 14, 8],
     group: '1',
   },
   {
