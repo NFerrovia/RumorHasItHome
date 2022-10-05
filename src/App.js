@@ -8,15 +8,14 @@ import Header from './components/Header';
 import '../src/css/App.css';
 
 const App = () => {
-
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoaded(true) , 300)//Change seconds to make more durable the loading screen
-  },[loaded])
+    setTimeout(() => setLoaded(true), 6000); //Change seconds to make more durable the loading screen
+  }, [loaded]);
 
-
-  return loaded ? <div>
+  return loaded ? (
+    <div>
       <Header />
       <Route path="/">
         <RaidingSchedule />
@@ -30,9 +29,10 @@ const App = () => {
       <Route path="/Events">
         <Events />
       </Route>
-    </div> : <h1>Cargando...</h1>//Replace with your loader
-    
-  
+    </div>
+  ) : (
+    <h1>Cargando...</h1>
+  ); //Replace with your loader
 };
 
 export default App;

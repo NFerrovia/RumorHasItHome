@@ -1,7 +1,7 @@
 {
   "name": "rumorhasit",
   "version": "0.1.0",
-  "homepage": "https://rumorhasit.link",
+  "homepage": "https://rumorhasit.link/",
   "private": true,
   "dependencies": {
     "@devexpress/dx-react-core": "^3.0.5",
