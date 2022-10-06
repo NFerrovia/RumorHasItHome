@@ -21,7 +21,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/RaidingSchedule" element={<RaidingSchedule />} />
+          <Route path="/" element={<RaidingSchedule />} />
           <Route path="/Activity" element={<ActiveRaiders />} />
           <Route path="/Mythicplus" element={<MythicPlus />} />
           <Route path="/Events" element={<Events />} />
