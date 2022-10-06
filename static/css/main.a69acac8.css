@@ -1,2 +1,0 @@
-div{align-items:center;display:"flex";justify-content:center}*{box-sizing:border-box;margin:0;padding:0}.container{align-items:center;background-color:#fff;display:flex;height:100vh;justify-content:center;width:100vw}.disappear{-webkit-animation:Animation .5s ease;animation:Animation .5s ease}@-webkit-keyframes Animation{0%{opacity:1}50%{opacity:.2}to{opacity:1}}@keyframes Animation{0%{opacity:1}50%{opacity:.2}to{opacity:1}}
-/*# sourceMappingURL=main.a69acac8.css.map*/
