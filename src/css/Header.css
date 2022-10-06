@@ -9,4 +9,9 @@ div.menu {
   padding-top: 35px;
   top: 0;
   z-index: 1000000;
+
+}
+
+.menu {
+  background-color: white !important;
 }

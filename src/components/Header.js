@@ -7,7 +7,7 @@ const Header = () => {
     <div className="ui secondary pointing menu">
       <NavLink
         end
-        to="/RaidingSchedule"
+        to="/"
         className={({ isActive }) => (isActive ? 'item active' : 'item')}
       >
         Raiding Schedule
