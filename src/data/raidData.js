@@ -73,7 +73,7 @@ export const appointments = [
     startDate: new Date(2022, 9, 2, 23, 50),
     endDate: new Date(2022, 9, 3, 2, 0),
     id: 0,
-    members: [1],
+    members: [2],
     event: '1',
   },
   {
@@ -81,7 +81,7 @@ export const appointments = [
     startDate: new Date(2022, 9, 3, 23, 50),
     endDate: new Date(2022, 9, 4, 2, 0),
     id: 1,
-    members: [1],
+    members: [2],
     event: '2',
   },
   {
@@ -89,7 +89,7 @@ export const appointments = [
     startDate: new Date(2022, 9, 9, 23, 50),
     endDate: new Date(2022, 9, 10, 2, 0),
     id: 0,
-    members: [1],
+    members: [2],
     event: '1',
   },
   {
@@ -97,7 +97,7 @@ export const appointments = [
     startDate: new Date(2022, 9, 10, 23, 50),
     endDate: new Date(2022, 9, 11, 2, 0),
     id: 1,
-    members: [1],
+    members: [2],
     event: '2',
   },
   // {
@@ -105,7 +105,7 @@ export const appointments = [
   //   startDate: new Date(2022, 9, 2, 23, 50),
   //   endDate: new Date(2022, 9, 3, 2, 0),
   //   id: 0,
-  //   members: [1],
+  //   members: [2],
   //   event: '1',
   // },
   // {
@@ -113,7 +113,7 @@ export const appointments = [
   //   startDate: new Date(2022, 9, 3, 23, 50),
   //   endDate: new Date(2022, 9, 4, 2, 0),
   //   id: 1,
-  //   members: [1],
+  //   members: [2],
   //   event: '2',
   // },
   // {
@@ -121,7 +121,7 @@ export const appointments = [
   //   startDate: new Date(2022, 9, 2, 23, 50),
   //   endDate: new Date(2022, 9, 3, 2, 0),
   //   id: 0,
-  //   members: [1],
+  //   members: [2],
   //   event: '1',
   // },
   // {
@@ -129,7 +129,7 @@ export const appointments = [
   //   startDate: new Date(2022, 9, 3, 23, 50),
   //   endDate: new Date(2022, 9, 4, 2, 0),
   //   id: 1,
-  //   members: [1],
+  //   members: [2],
   //   event: '2',
   // },
 ];

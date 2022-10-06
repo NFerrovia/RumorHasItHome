@@ -1,22 +1,35 @@
 import React from 'react';
-import Link from './Link';
 import '../css/Header.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className="ui secondary pointing menu">
-      <Link href="/" className="item">
+      <NavLink
+        end
+        to="/RaidingSchedule"
+        className={({ isActive }) => (isActive ? 'item active' : 'item')}
+      >
         Raiding Schedule
-      </Link>
-      <Link href="/Activity" className="item">
+      </NavLink>
+      <NavLink
+        to="/Activity"
+        className={({ isActive }) => (isActive ? 'item active' : 'item')}
+      >
         Active Raiders
-      </Link>
-      <Link href="/Mythicplus" className="item">
+      </NavLink>
+      <NavLink
+        to="/Mythicplus"
+        className={({ isActive }) => (isActive ? 'item active' : 'item')}
+      >
         M+ Spreadsheet
-      </Link>
-      <Link href="/Events" className="item">
+      </NavLink>
+      <NavLink
+        to="/Events"
+        className={({ isActive }) => (isActive ? 'item active' : 'item')}
+      >
         Events
-      </Link>
+      </NavLink>
     </div>
   );
 };

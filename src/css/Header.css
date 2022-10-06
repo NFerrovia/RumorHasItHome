@@ -3,3 +3,10 @@ div {
   align-items: center;
   justify-content: center;
 }
+
+div.menu {
+  position: sticky;
+  padding-top: 35px;
+  top: 0;
+  z-index: 1000000;
+}
