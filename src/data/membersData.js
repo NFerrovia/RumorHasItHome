@@ -27,3 +27,38 @@ export const members = {
     { id: 22, text: 'Exei' },
   ],
 };
+
+export const raiders = `
+<ListItem alignItems="flex-start">
+<ListItemAvatar>
+  <Avatar
+    alt="Remy Sharp"
+    src="https://render.worldofwarcraft.com/us/character/lightbringer/238/146705902-avatar.jpg"
+  />
+</ListItemAvatar>
+<ListItemText
+  primary="Tacomonde"
+  secondary={
+    <React.Fragment>
+      <Typography
+        sx={{ display: 'inline' }}
+        component="span"
+        variant="body2"
+        color="text.primary"
+      >
+        <b>Active</b>
+      </Typography>
+      <div>
+        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChecked />
+      </div>
+    </React.Fragment>
+  }
+/>
+</ListItem>
+<Divider variant="inset" component="li" />
+`;
