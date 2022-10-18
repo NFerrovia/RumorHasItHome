@@ -51,7 +51,7 @@ export const raiders = `
       <div>
         <Checkbox {...label} defaultChecked />
         <Checkbox {...label} defaultChecked />
-        <Checkbox {...label} defaultChecked />
+        <Checkbox {...label} defaultChimage.pngecked />
         <Checkbox {...label} defaultChecked />
         <Checkbox {...label} defaultChecked />
         <Checkbox {...label} defaultChecked />

@@ -12,7 +12,7 @@ export const codeReport = gql`
   }
 `;
 
-export const report1 = gql`
+export const reportPlayers = gql`
   {
     reportData {
       report(code: "aQc1GLJFh4gyNvzr") {
