@@ -1,12 +1,27 @@
-import React from "react";
-import { useQuery } from "@apollo/client";
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import Checkbox from '@mui/material/Checkbox';
+import { codeReport } from '../data/warcraftlogsQueries';
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const FetchComponent = ({ code }) => {
-  const { data: data0, loading: loading0, error: error0 } = useQuery(code);
+  const { data: data, loading: loading, error: error } = useQuery(code);
 
-  console.log({ data0 });
+  const playerList = data
+    ? data.reportData.report.masterData.actors.map(({ name }) => name)
+    : [];
 
-  return <div>FetchComponent</div>;
+  return (
+    <div>
+      {' '}
+      {playerList.includes('Tacomonde') ? (
+        <Checkbox {...label} defaultChecked />
+      ) : (
+        <Checkbox {...label} />
+      )}
+    </div>
+  );
 };
 
 export default FetchComponent;
