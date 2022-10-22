@@ -8,7 +8,7 @@ const PlayerList = ({ querys }) => {
 
   if (loading) return <h1>Loading</h1>;
   return (
-    !!playersList &&
+    !!playersList[0].attendances.length &&
     playersList.map((playerData) => {
       return <PlayerCard data={playerData} />;
     })

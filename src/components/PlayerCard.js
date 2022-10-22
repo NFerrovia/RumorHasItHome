@@ -1,5 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
 import { Checkbox } from "@mui/material";
-import React from "react";
 
 // {
 //     "attendances": [
@@ -62,27 +62,54 @@ import React from "react";
 
 const PlayerCard = ({ data }) => {
   const { attendances, player } = data;
+  const [avatar, setAvatar] = useState("");
+  const loadedFlag = useRef(false);
+
+  useEffect(() => {
+    (async () => {
+      if (!loadedFlag.current && player.name) {
+        try {
+          const response = await fetch(
+            `https://us.api.blizzard.com/profile/wow/character/lightbringer/${player.name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=EU2U3uHNxaP9oSTaMdJaycy4rcRE61i2r0`
+          );
+
+          const result = await response.json();
+          setAvatar(result?.assets[0].value);
+        } catch (e) {
+          setAvatar(
+            "https://render.worldofwarcraft.com/us/character/lightbringer/238/146705902-avatar.jpg"
+          );
+        } finally {
+          loadedFlag.current = true;
+        }
+      }
+    })();
+  }, [player.name]);
+
   return (
-    <div key={player.name} className="player-card">
-      <div className="player-header">
-        <img
-          alt={`${player.name} profile`}
-          className="player-avatar"
-          src="https://render.worldofwarcraft.com/us/character/lightbringer/238/146705902-avatar.jpg"
-        />
-        <div className="player-info">
-          <h4>{player.name}</h4> <p>Attendances:</p>
+    data &&
+    loadedFlag.current && (
+      <div key={player.name} className="player-card">
+        <div className="player-header">
+          <img
+            alt={`${player.name} profile`}
+            className="player-avatar"
+            src={avatar}
+          />
+          <div className="player-info">
+            <h4>{player.name}</h4> <p>Attendances:</p>
+          </div>
+        </div>
+        <div className="attendances">
+          {attendances.map((attendance, index) => (
+            <div className="attendance" key={index}>
+              <p>{attendance.event.name}</p>
+              <Checkbox checked={attendance.attended} />
+            </div>
+          ))}
         </div>
       </div>
-      <div className="attendances">
-        {attendances.map((attendance, index) => (
-          <div className="attendance" key={index}>
-            <p>{attendance.event.name}</p>
-            <Checkbox checked={attendance.attended} />
-          </div>
-        ))}
-      </div>
-    </div>
+    )
   );
 };
 
