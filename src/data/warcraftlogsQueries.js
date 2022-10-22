@@ -11,24 +11,3 @@ export const codeReport = gql`
     }
   }
 `;
-
-export const reportPlayers = gql`
-  {
-    reportData {
-      report(code: "aQc1GLJFh4gyNvzr") {
-        code
-        revision
-        zone {
-          id
-          name
-        }
-        masterData(translate: false) {
-          actors(type: "player") {
-            name
-            subType
-          }
-        }
-      }
-    }
-  }
-`;
