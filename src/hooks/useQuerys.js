@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useQuery } from "@apollo/client";
+import { useLazyQuery, useQuery } from "@apollo/client";
 import { none } from "../utils/arrayUtils";
 
 const PLAYERS = [
@@ -37,11 +37,16 @@ const useQuerys = (querys) => {
   const { data: data4, loading: loading4, error: error4 } = useQuery(querys[4]);
   const { data: data5, loading: loading5, error: error5 } = useQuery(querys[5]);
   const [totalEvents, setTotalEvents] = useState([]);
-  console.log({ querys });
 
   useEffect(() => {
-    !!data5 && setTotalEvents([data0, data1, data2, data3, data4, data5]);
-  }, [data0, data1, data2, data3, data4, data5]);
+    !loading0 &&
+      !loading1 &&
+      !loading2 &&
+      !loading3 &&
+      !loading4 &&
+      !loading5 &&
+      setTotalEvents([data0, data1, data2, data3, data4, data5]);
+  }, [loading0, loading1, loading2, loading3, loading4, loading5]);
 
   const playersAssists =
     none(totalEvents, (event) => !event) &&
