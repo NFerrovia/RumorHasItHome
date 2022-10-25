@@ -12,7 +12,7 @@ const App = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoaded(true), 500); //Change seconds to make more durable the loading screen
+    setTimeout(() => setLoaded(true), 1000); //Change seconds to make more durable the loading screen
   }, [loaded]);
 
   return (

@@ -1,0 +1,11 @@
+.status {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 2.7%;
+  font-weight: bold;
+  font-size: large;
+}
+
+.invisible {
+  display: none;
+}

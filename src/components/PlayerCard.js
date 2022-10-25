@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Checkbox } from "@mui/material";
+import React, { useEffect, useRef, useState } from 'react';
+import '../css/PlayerCard.css';
+import { Checkbox } from '@mui/material';
 
 // {
 //     "attendances": [
@@ -62,8 +63,9 @@ import { Checkbox } from "@mui/material";
 
 const PlayerCard = ({ data }) => {
   const { attendances, player } = data;
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState('');
   const loadedFlag = useRef(false);
+  let active = 0;
 
   useEffect(() => {
     (async () => {
@@ -76,9 +78,7 @@ const PlayerCard = ({ data }) => {
           const result = await response.json();
           setAvatar(result?.assets[0].value);
         } catch (e) {
-          setAvatar(
-            "https://render.worldofwarcraft.com/us/character/lightbringer/238/146705902-avatar.jpg"
-          );
+          setAvatar('https://render.worldofwarcraft.com/shadow/avatar/1-0.jpg');
         } finally {
           loadedFlag.current = true;
         }
@@ -97,7 +97,7 @@ const PlayerCard = ({ data }) => {
             src={avatar}
           />
           <div className="player-info">
-            <h4>{player.name}</h4> <p>Attendances:</p>
+            <h4>{player.name}</h4> <p>Status:</p>
           </div>
         </div>
         <div className="attendances">
@@ -105,9 +105,13 @@ const PlayerCard = ({ data }) => {
             <div className="attendance" key={index}>
               <p>{attendance.event.name}</p>
               <Checkbox checked={attendance.attended} />
+              <div className="invisible">
+                {attendance.attended ? (active += 1) : (active += 0)}
+              </div>
             </div>
           ))}
         </div>
+        <div className="status">{active >= 3 ? 'Active' : 'Inactive'}</div>
       </div>
     )
   );
