@@ -1,10 +1,9 @@
-import React from "react";
-
-import { useQuery } from "@apollo/client";
-import { codeReport } from "../data/warcraftlogsQueries.js";
-import { gql } from "@apollo/client";
-import "../css/ActiveRaiders.css";
-import PlayerList from "./PlayerList.js";
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { codeReport } from '../data/warcraftlogsQueries.js';
+import { gql } from '@apollo/client';
+import '../css/ActiveRaiders.css';
+import PlayerList from './PlayerList.js';
 
 const ActiveRaiders = () => {
   const { data: data, loading: loading, error: error } = useQuery(codeReport);

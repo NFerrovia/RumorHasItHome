@@ -1,17 +1,17 @@
-div {
+div.menu {
   display: 'flex';
   align-items: center;
   justify-content: center;
-}
-
-div.menu {
   position: sticky;
   padding-top: 35px;
   top: 0;
   z-index: 1000000;
-
 }
 
 .menu {
   background-color: white !important;
+}
+
+.logo {
+  max-height: 40px;
 }

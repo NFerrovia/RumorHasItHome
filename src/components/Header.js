@@ -1,10 +1,12 @@
 import React from 'react';
 import '../css/Header.css';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.jpeg';
 
 const Header = () => {
   return (
     <div className="ui secondary pointing menu">
+      <img className="logo" src={logo}></img>
       <NavLink
         end
         to="/"
@@ -28,7 +30,7 @@ const Header = () => {
         to="/Events"
         className={({ isActive }) => (isActive ? 'item active' : 'item')}
       >
-        Events
+        Other Events
       </NavLink>
     </div>
   );
