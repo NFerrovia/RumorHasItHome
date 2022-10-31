@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/Header.css';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
@@ -25,6 +25,12 @@ const Header = () => {
         className={({ isActive }) => (isActive ? 'item active' : 'item')}
       >
         M+ Spreadsheet
+      </NavLink>
+      <NavLink
+        to="/SeasonRace"
+        className={({ isActive }) => (isActive ? 'item active' : 'item')}
+      >
+        M+ Season Race
       </NavLink>
       <NavLink
         to="/Events"

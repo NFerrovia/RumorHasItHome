@@ -72,7 +72,7 @@ const PlayerCard = ({ data }) => {
       if (!loadedFlag.current && player.name) {
         try {
           const response = await fetch(
-            `https://us.api.blizzard.com/profile/wow/character/lightbringer/${player.name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=EU2U3uHNxaP9oSTaMdJaycy4rcRE61i2r0`
+            `https://us.api.blizzard.com/profile/wow/character/lightbringer/${player.name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=EUwQIBtmAjSOQtxwDW9EmgmisTlMvh8fsN`
           );
 
           const result = await response.json();

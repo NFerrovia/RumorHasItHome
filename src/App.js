@@ -3,6 +3,7 @@ import RaidingSchedule from './components/RaidingSchedule';
 import MythicPlus from './components/MythicPlus';
 import ActiveRaiders from './components/ActiveRaiders';
 import Events from './components/Events';
+import SeasonRace from './components/SeasonRace';
 import Header from './components/Header';
 import '../src/css/App.css';
 import Loader from './components/Loader';
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/" element={<RaidingSchedule />} />
           <Route path="/Activity" element={<ActiveRaiders />} />
           <Route path="/Mythicplus" element={<MythicPlus />} />
+          <Route path="/SeasonRace" element={<SeasonRace />} />
           <Route path="/Events" element={<Events />} />
         </Routes>
       </Router>
